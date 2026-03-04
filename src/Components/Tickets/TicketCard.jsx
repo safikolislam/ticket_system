@@ -3,8 +3,8 @@ import { BiCalendar } from 'react-icons/bi';
 
 import { FaCircle } from 'react-icons/fa';
 
-const TicketCard = ({ticket}) => {
- console.log(ticket);
+const TicketCard = ({ticket,setTask,task}) => {
+
  const {title,description,status,id,priority,createdAt,
 customer
 } = ticket;
@@ -13,9 +13,13 @@ customer
       "MEDIUM PRIORITY":"text-yellow-500",
       "HIGH PRIORITY" : "text-red-500"
     }
+    const handleClick= ()=>{
+      
+         setTask([...task ,ticket])
+    }
     return (
-       <div>
-        <div className="card card-border bg-base-100 w-100 -ml-15 lg:ml-2">
+       <div onClick={handleClick}>
+        <div className="card card-border bg-base-100 w-100 -ml-15 lg:ml-2 md:ml-3">
   <div className="card-body">
     <div className="flex justify-between items-center">
      <h2 className="card-title">{title}</h2> 
