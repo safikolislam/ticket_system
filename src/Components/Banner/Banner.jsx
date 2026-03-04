@@ -1,5 +1,5 @@
 import React from 'react';
-import bg1 from "../../../assets/vector1.png"
+import bg1 from "../../assets/vector1.png"
 
 
 const Banner = () => {
@@ -29,5 +29,3 @@ const Banner = () => {
 };
 
 export default Banner;
-
-
