@@ -17,11 +17,14 @@ const fetchPromise = fetchData()
   return (
     <>
     <Navbar></Navbar>
+    <div className="pt-16">
     <Banner></Banner>
     <Suspense fallback={<p>Loading....</p>}>
 
     <Tickets fetchPromise={fetchPromise}></Tickets>
     </Suspense>
+    </div>
+
     </>
   )
 }

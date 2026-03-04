@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { BiCalendar } from 'react-icons/bi';
 
 import { FaCircle } from 'react-icons/fa';
 
@@ -14,7 +15,7 @@ customer
     }
     return (
        <div>
-        <div className="card card-border bg-base-100 w-96 ">
+        <div className="card card-border bg-base-100 w-100 -ml-15 lg:ml-2">
   <div className="card-body">
     <div className="flex justify-between items-center">
      <h2 className="card-title">{title}</h2> 
@@ -26,7 +27,7 @@ customer
         <p>#{id}</p>
         <p className={`${PriorityStyle[priority]}`}>{priority}</p>
         <p>{customer}</p>
-        <p>{createdAt}</p>
+        <p className="flex items-center gap-1 pl-3"><BiCalendar className="-mt-5"></BiCalendar>{createdAt}</p>
    </div>
   </div>
 </div>

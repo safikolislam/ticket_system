@@ -4,7 +4,7 @@ import bg1 from "../../assets/vector1.png"
 
 const Banner = () => {
     return (
-        <div className="flex flex-wrap gap-6 p-10 justify-center items-center bg-gray-100 text-white">
+        <div className="top-0 flex flex-wrap gap-6 p-10 justify-center items-center bg-gray-100 text-white">
 
             <div className="bg-blue-500 rounded-md relative flex w-[700px] h-[250px] flex-col items-center justify-center overflow-hidden">
                 <img src={bg1} alt="backgroun1" className="absolute inset-0 h-full w-full object-contain" />

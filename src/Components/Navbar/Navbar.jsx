@@ -7,10 +7,10 @@ const Navbar = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <div className="navbar bg-base-100 shadow-sm flex justify-between items-center">
-            <div className="pl-10 md:pl-20">CS - Ticket System</div>
+        <div className="fixed bg-white/10 backdrop-blur-sm  z-50 navbar  shadow-sm flex justify-between items-center">
+            <div className="pl-10 md:pl-20 lg:pl-50">CS - Ticket System</div>
             <div >
-                <ul className="md:flex gap-5 items-center  pr-20 hidden">
+                <ul className="md:flex gap-5 items-center  pr-20 lg:pr-50 hidden">
                     <li><a className="hover:underline transition duration-300 underline-offset-2" href="#">Home</a></li>
                     <li><a className="hover:underline transition duration-300 underline-offset-1" href="#">FAQ</a></li>
                 
