@@ -30,7 +30,7 @@ const Banner = ({task,resolved}) => {
              </div>
               
                 <div className="relative z-10 text-center">
-                    <p className="text-lg font-medium">Resolve</p>
+                    <p className="text-lg font-medium">Resolved</p>
                     <h2 className="text-5xl font-bold">{resolved.length}</h2>
                 </div>
             </div>

@@ -2,10 +2,11 @@
 import { BiCalendar } from 'react-icons/bi';
 
 import { FaCircle } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const TicketCard = ({ticket,setTask,task}) => {
 
- const {title,description,status,id,priority,createdAt,
+ const { title,description,status,id,priority,createdAt,
 customer
 } = ticket;
     const PriorityStyle={
@@ -13,14 +14,20 @@ customer
       "MEDIUM PRIORITY":"text-yellow-500",
       "HIGH PRIORITY" : "text-red-500"
     }
-    const handleClick= ()=>{
-      
-         setTask([...task ,ticket])
-    }
+    const AddToTaskbar= ()=>{
+    
+      setTask([...task ,ticket]);
+      toast("Added the Task")
+     
+    
+    } 
+ 
     return (
-       <div onClick={handleClick}>
-        <div className="card card-border bg-base-100 w-100 -ml-15 lg:ml-2 md:ml-3">
-  <div className="card-body">
+       <div onClick={
+      AddToTaskbar
+      }>
+        <div className="mb-5 card card-border bg-base-100 w-100   -ml-15 lg:ml-2 md:ml-3">
+  <div className="card-body ">
     <div className="flex justify-between items-center">
      <h2 className="card-title">{title}</h2> 
      <span  className={`badge  px-2 py-1 whitespace-nowrap ${status === "Open"? "bg-green-400 text-green-700" : "bg-yellow-300 text-yellow-600"}`}><FaCircle className="text-current" ></FaCircle>{status}</span>
